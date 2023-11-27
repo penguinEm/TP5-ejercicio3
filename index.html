@@ -36,23 +36,41 @@
       </nav>
     </header>
     <main>
+      <!-- CONTENEDOR TITULO -->
+      <section class="container text-center my-4 text-primary-emphasis">
+        <h1 class="display-4">TAREAS</h1>
+      </section>
       <section class="container my-5">
         <!-- input -->
         <div
-          class="row my-5 d-flex justify-content-center border border-info-subtle rounded-5 ms-5 me-5"
+          class="my-5 d-flex justify-content-center"
         >
-          <form id="formulario_numeroUsuario" class="d-flex py-3 px-5">
-            <input
-              type="number"
-              required
-              class="form-control text-info-emphasis ms-5 me-1"
-              placeholder="Del 1 al 10 ¿Cúal es?"
-              max="10"
-              min="1"
-            />
-            <button type="submit" class="btn btn-info me-5 ms-1">+</button>
+          <form id="formularioTarea" class="row">
+            <div class="col-lg-11 col-md-11 col-sm-12">
+              <input
+                id="inputTarea"
+                type="text"
+                class="form-control text-info-emphasis w-100"
+                placeholder="Ingrese su tarea"
+                maxlength="30"
+                minlength="3"
+                required
+              />
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 text-center">
+              <button type="submit" class="btn btn-outline-info">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
           </form>
         </div>
+
+        <!-- Contenedor lista de tareas -->
+        <section
+          class="border border-info-subtle rounded-5 text-info-emphasis fs-4 text-start py-5"
+        >
+          <ul class="list-unstyled row border-1"></ul>
+        </section>
       </section>
     </main>
     <footer class="text-center">
